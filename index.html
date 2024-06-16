@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers for my pookie</title>
+</head>
+<body>
+    <div class="greetings">
+    <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
+        <span>D</span>
+        <span>I</span>
+        <span>K</span>
+        <span>S</span>
+        <span>H</span>
+        <span>A</span>
+    </div>
+    <div class="description">
+        <span>Je Vous Aime Beaucoup</span>
+    </div>
+    <div class="button">
+        <button style="background-color: transparent; border: 2px solid #fff; border-radius: 8px; padding: 10px 20px; cursor: pointer; position: relative; overflow: hidden; transition: all 0.4s ease;">
+            <a href="flower.html" style="color: #fff; text-decoration: none; font-size: 16px; position: relative; z-index: 1; display: inline-block; transition: transform 0.4s ease, text-shadow 0.4s ease;">TIKKU</a>
+            <span style="content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); transition: all 0.4s ease;"></span>
+        </button>
+    </div>
+    
+    <script>
+        const button = document.querySelector('.button button');
+        const link = button.querySelector('a');
+        const span = button.querySelector('span');
+    
+        button.addEventListener('mouseover', function() {
+            span.style.top = '0';
+            span.style.left = '0';
+            link.style.transform = 'scale(1.1)';
+            link.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)';
+        });
+    
+        button.addEventListener('mouseout', function() {
+            span.style.top = '-50%';
+            span.style.left = '-50%';
+            link.style.transform = 'scale(1)';
+            link.style.textShadow = 'none';
+        });
+    </script>
+    
+    
+</body>
+</html>
